@@ -6,12 +6,19 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const app = express();
-const PORT = Number(process.env.PORT) || 3000;
+const PORT = Number(process.env.PORT) || 5104;
 const HOST = process.env.HOST || '0.0.0.0';
 const fallbackPath = path.join(__dirname, 'characters.json');
+let charactersReady = Promise.resolve();
 
 app.use(express.json());
-app.use(express.static('public'));
+app.use((req, res, next) => {
+  charactersReady.then(() => next(), next);
+});
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', characters: characters.length });
@@ -172,6 +179,12 @@ app.post('/undo', (req, res) => {
 });
 
 // ---------------------------------------------------------------------
-loadCharacters().then(() => {
-  app.listen(PORT, HOST, () => console.log(`🚀 http://localhost:${PORT}`));
-});
+charactersReady = loadCharacters();
+
+if (require.main === module) {
+  charactersReady.then(() => {
+    app.listen(PORT, HOST, () => console.log(`🚀 http://localhost:${PORT}`));
+  });
+}
+
+module.exports = app;
