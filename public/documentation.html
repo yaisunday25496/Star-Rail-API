@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation — Honkai: Star Rail Dashboard</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: Arial, "TH Sarabun New", sans-serif; margin: 0; background: #0F172A; color: #F8FAFC; }
+    header { background: #1E1B4B; color: #fff; padding: 16px 24px; border-bottom: 2px solid #6366F1; }
+    header h1 { margin: 0; font-size: 20px; color: #E0E7FF; }
+    header p { margin: 4px 0 0; font-size: 13px; color: #A5B4FC; }
+    .header-nav { display: flex; gap: 16px; margin-top: 12px; }
+    .header-nav a { color: #E0E7FF; font-size: 13px; font-weight: bold; text-decoration: none; border-bottom: 1px solid #818CF8; padding-bottom: 3px; }
+    .header-nav a:hover, .header-nav a:focus { color: #fff; border-color: #fff; }
+    main { display: grid; gap: 16px; max-width: 900px; margin: 0 auto; padding: 24px; }
+    section { background: #1E293B; border: 1px solid #334155; border-radius: 8px; padding: 18px; }
+    h2 { margin: 0 0 10px; color: #818CF8; font-size: 17px; }
+    p, li { color: #E2E8F0; font-size: 14px; line-height: 1.7; }
+    p { margin: 8px 0; }
+    ul { margin: 8px 0 0; padding-left: 22px; }
+    li + li { margin-top: 6px; }
+    a { color: #A5B4FC; overflow-wrap: anywhere; }
+    code { color: #C4B5FD; }
+    @media (max-width: 600px) {
+      main { padding: 16px; }
+      header { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Honkai: Star Rail Dashboard</h1>
+    <p>Documentation · แหล่งที่มาของข้อมูลในเว็บไซต์</p>
+    <nav class="header-nav" aria-label="เมนูหลัก">
+      <a href="/documentation.html" aria-current="page">Documentation</a>
+      <a href="/dashboard.html#character-section">Characters</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>ข้อมูลตัวละคร</h2>
+      <p>เซิร์ฟเวอร์จะพยายามโหลดข้อมูลตัวละครจาก Honkai: Star Rail API เมื่อเริ่มทำงาน:</p>
+      <ul>
+        <li>API หลัก: <a href="https://honkai-starrail-api.vercel.app/api/v1/characters" target="_blank" rel="noopener noreferrer">honkai-starrail-api.vercel.app/api/v1/characters</a></li>
+        <li>เซิร์ฟเวอร์แปลงข้อมูลที่ได้รับเป็น ID, ชื่อ, ระดับดาว, สาย (Path), ธาตุ (Element) และ URL รูปภาพ ก่อนเก็บไว้ในหน่วยความจำเพื่อให้หน้าเว็บเรียกใช้</li>
+        <li>หากเรียก API ไม่สำเร็จ จะใช้ข้อมูลสำรองจาก <code>characters.json</code> ที่อยู่ในโฟลเดอร์หลักของโปรเจกต์</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>รูปภาพตัวละคร</h2>
+      <p>หน้า Characters ใช้ URL รูปภาพที่มากับข้อมูลตัวละครจาก API (ช่อง <code>icon</code> หรือ <code>image</code>) หรือจาก <code>characters.json</code> เมื่อใช้ข้อมูลสำรอง รูปภาพจึงอาจถูกโหลดจากเซิร์ฟเวอร์ภายนอกตาม URL ของแต่ละรายการ</p>
+    </section>
+
+    <section>
+      <h2>ข้อมูลคิวและประวัติ</h2>
+      <p>คิวจัดทีมและประวัติการเพิ่ม/เลือกตัวละครไม่ได้ดึงจาก API ภายนอก แต่สร้างและเก็บไว้ในหน่วยความจำของเซิร์ฟเวอร์ขณะทำงาน ข้อมูลเหล่านี้จะเริ่มใหม่เมื่อเซิร์ฟเวอร์ปิดหรือเริ่มทำงานอีกครั้ง</p>
+      <ul>
+        <li><code>/watchlist</code> อ่านคิว, <code>POST /watchlist</code> เพิ่มตัวละคร และ <code>DELETE /watchlist/process</code> นำตัวละครออกจากคิว</li>
+        <li><code>/history</code> อ่านประวัติ และ <code>POST /undo</code> ย้อนการกระทำล่าสุด</li>
+        <li><code>/characters?sort=selection</code> อ่านรายการตัวละครที่เรียงแล้ว โดยเลือกอัลกอริทึมได้เป็น <code>selection</code>, <code>insertion</code> หรือ <code>bubble</code></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

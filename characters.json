@@ -1,0 +1,163 @@
+
+[
+  {
+    "id": 1,
+    "name": "Trailblazer (Physical)",
+    "rarity": 5,
+    "path": "Destruction",
+    "element": "Physical",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/8001.png"
+  },
+  {
+    "id": 2,
+    "name": "March 7th",
+    "rarity": 4,
+    "path": "Preservation",
+    "element": "Ice",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1001.png"
+  },
+  {
+    "id": 3,
+    "name": "Dan Heng",
+    "rarity": 4,
+    "path": "The Hunt",
+    "element": "Wind",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1002.png"
+  },
+  {
+    "id": 4,
+    "name": "Himeko",
+    "rarity": 5,
+    "path": "Erudition",
+    "element": "Fire",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1003.png"
+  },
+  {
+    "id": 5,
+    "name": "Welt",
+    "rarity": 5,
+    "path": "Nihility",
+    "element": "Imaginary",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1004.png"
+  },
+  {
+    "id": 6,
+    "name": "Kafka",
+    "rarity": 5,
+    "path": "Nihility",
+    "element": "Lightning",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1005.png"
+  },
+  {
+    "id": 7,
+    "name": "Silver Wolf",
+    "rarity": 5,
+    "path": "Nihility",
+    "element": "Quantum",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1006.png"
+  },
+  {
+    "id": 8,
+    "name": "Arlan",
+    "rarity": 4,
+    "path": "Destruction",
+    "element": "Lightning",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1008.png"
+  },
+  {
+    "id": 9,
+    "name": "Asta",
+    "rarity": 4,
+    "path": "Harmony",
+    "element": "Fire",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1009.png"
+  },
+  {
+    "id": 10,
+    "name": "Herta",
+    "rarity": 4,
+    "path": "Erudition",
+    "element": "Ice",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1013.png"
+  },
+  {
+    "id": 11,
+    "name": "Bronya",
+    "rarity": 5,
+    "path": "Harmony",
+    "element": "Wind",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1101.png"
+  },
+  {
+    "id": 12,
+    "name": "Seele",
+    "rarity": 5,
+    "path": "The Hunt",
+    "element": "Quantum",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1102.png"
+  },
+  {
+    "id": 13,
+    "name": "Gepard",
+    "rarity": 5,
+    "path": "Preservation",
+    "element": "Ice",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1104.png"
+  },
+  {
+    "id": 14,
+    "name": "Natasha",
+    "rarity": 4,
+    "path": "Abundance",
+    "element": "Physical",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1105.png"
+  },
+  {
+    "id": 15,
+    "name": "Pela",
+    "rarity": 4,
+    "path": "Nihility",
+    "element": "Ice",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1106.png"
+  },
+  {
+    "id": 16,
+    "name": "Clara",
+    "rarity": 5,
+    "path": "Destruction",
+    "element": "Physical",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1107.png"
+  },
+  {
+    "id": 17,
+    "name": "Sampo",
+    "rarity": 4,
+    "path": "Nihility",
+    "element": "Wind",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1108.png"
+  },
+  {
+    "id": 18,
+    "name": "Hook",
+    "rarity": 4,
+    "path": "Destruction",
+    "element": "Fire",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1109.png"
+  },
+  {
+    "id": 19,
+    "name": "Lynx",
+    "rarity": 4,
+    "path": "Abundance",
+    "element": "Quantum",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1110.png"
+  },
+  {
+    "id": 20,
+    "name": "Jing Yuan",
+    "rarity": 5,
+    "path": "Erudition",
+    "element": "Lightning",
+    "image": "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/icon/character/1204.png"
+  }
+]
